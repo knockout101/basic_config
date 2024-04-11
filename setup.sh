@@ -13,13 +13,13 @@ else
 fi
 
 # Check for Neovim installation
-if ! nvim --version > /dev/null;
+if command -v nvim;
 then
 	echo "Neovim not installed..."
-	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-	chmod u+x nvim.appimage
-	mkdir -p /opt/nvim
-	mv nvim.appimage /opt/nvim/nvim	
+#	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+#	chmod u+x nvim.appimage
+#	mkdir -p /opt/nvim
+#	mv nvim.appimage /opt/nvim/nvim	
 else
 	echo "Neovim is already installed"
 fi
